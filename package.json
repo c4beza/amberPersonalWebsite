@@ -15,8 +15,10 @@
   "dependencies": {
     "@cloudbase/vue-provider": "^0.5.1",
     "@fortawesome/fontawesome-free": "^5.15.4",
+    "axios": "^0.21.1",
     "core-js": "^3.6.4",
     "vue": "^2.6.11",
+    "vue-axios": "^3.2.5",
     "vue-router": "^3.5.2"
   },
   "devDependencies": {

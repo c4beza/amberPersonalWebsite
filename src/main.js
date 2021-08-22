@@ -4,6 +4,10 @@ Vue.use(VueRouter);
 import App from "./App.vue";
 import Cloudbase from "@cloudbase/vue-provider";
 import router from "./router.js";
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+Vue.use(VueAxios, axios)
+
 
 
 
@@ -24,9 +28,8 @@ Vue.use(Cloudbase, {
 });
 
 new Vue({
-  el:'#app',
-  render: h => h(App),
-  router
-});
+  router,
+  render: h => h(App)
+}).$mount('#app')
 
 

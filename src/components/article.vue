@@ -28,7 +28,7 @@ export default {
       contentList: [
         {
           id: 1,
-          imgUrl: require("../assets/home-bg.jpg"),
+          imgUrl: require("../assets/ezhomes.png"),
           title: "科学上网",
           date: "April 21, 2021",
           category: "TECO",

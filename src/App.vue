@@ -17,8 +17,6 @@
 </template>
 
 <script>
-//import HelloWorld from "./components/HelloWorld.vue";
-
 import navibar from "./components/navigation-bar.vue";
 import leftsidebar from "./components/leftside-bar.vue";
 import bottom from "./components/bottom.vue";

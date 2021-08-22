@@ -61,7 +61,7 @@ export default {
       contentList: [
         {
           id: 1,
-          imgUrl: require("../assets/home-bg.jpg"),
+          imgUrl: require("../assets/ezhomes.png"),
           title: "科学上网",
           date: "April 21, 2021",
           category: "TECO",
@@ -70,7 +70,7 @@ export default {
         },
         {
           id: 2,
-          imgUrl: require("../assets/home-bg.jpg"),
+          imgUrl: require("../assets/egl.png"),
           title: "科学上网",
           date: "April 21, 2021",
           category: "TECO",
@@ -79,16 +79,7 @@ export default {
         },
         {
           id: 3,
-          imgUrl: require("../assets/home-bg.jpg"),
-          title: "科学上网",
-          date: "April 21, 2021",
-          category: "TECO",
-          content:
-            "vpn一般指虚拟专用网络。虚拟专用网络(VPN)的功能是：在公用网络上建立专用网络，进行加密通讯。在企业网络中有广泛应用。VPN网关通过对数据包的加密和数据包目标地址的转换实现远程访问。VPN可通过服务器、硬件、软件等多种方式实现。",
-        },
-        {
-          id: 4,
-          imgUrl: require("../assets/home-bg.jpg"),
+          imgUrl: require("../assets/hfh.png"),
           title: "科学上网",
           date: "April 21, 2021",
           category: "TECO",
