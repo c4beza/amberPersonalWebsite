@@ -3,7 +3,7 @@
     <div class="skillbox content-container">
       <span class="title">技能属性</span>
       <div class="skillbar" v-for="skill in skillList" :key="skill.name">
-        <div :class="skill.style">
+        <div :class="skill.style" :style="{ width: '' + skill.percent + '' }">
           <span>{{ skill.name }}</span>
         </div>
         <div class="skill-bar-percent">{{ skill.percent }}</div>
@@ -17,77 +17,34 @@
     >
       <router-link :to="{ path: '/article', query: { id: item.id } }">
         <div class="img-container">
-          <img :src="item.imgUrl" :alt="item.title" class="contentImg" />
+          <img :src="item.thumbnailUrl" :alt="item.title" class="contentImg" />
         </div>
         <div class="right-content">
           <span class="title">{{ item.title }}</span
           ><br />
-          <span>{{ item.date }}</span
-          >|
+          <span>{{ item.date }}</span> |
           <span>{{ item.category }}</span>
-          <p>{{ item.content }}</p>
+          <span v-html="item.content"></span>
         </div>
       </router-link>
     </div>
   </div>
 </template>
 <script>
+import jsonData from "../../public/data.json";
+let contentList = jsonData.articles;
+let skillList = jsonData.skills;
 export default {
   name: "rightsidecolumn",
   data() {
     return {
-      skillList: [
-        {
-          name: "墨刀",
-          percent: "85%",
-          style: "skillbar-title style1",
-        },
-        {
-          name: "墨刀",
-          percent: "80%",
-          style: "skillbar-title style2",
-        },
-        {
-          name: "墨刀",
-          percent: "45%",
-          style: "skillbar-title style3",
-        },
-        {
-          name: "墨刀",
-          percent: "60%",
-          style: "skillbar-title style4",
-        },
-      ],
-      contentList: [
-        {
-          id: 1,
-          imgUrl: require("../assets/ezhomes.png"),
-          title: "科学上网",
-          date: "April 21, 2021",
-          category: "TECO",
-          content:
-            "vpn一般指虚拟专用网络。虚拟专用网络(VPN)的功能是：在公用网络上建立专用网络，进行加密通讯。在企业网络中有广泛应用。VPN网关通过对数据包的加密和数据包目标地址的转换实现远程访问。VPN可通过服务器、硬件、软件等多种方式实现。vpn一般指虚拟专用网络。虚拟专用网络(VPN)的功能是：在公用网络上建立专用网络，进行加密通讯。在企业网络中有广泛应用。VPN网关通过对数据包的加密和数据包目标地址的转换实现远程访问。VPN可通过服务器、硬件、软件等多种方式实现。",
-        },
-        {
-          id: 2,
-          imgUrl: require("../assets/egl.png"),
-          title: "科学上网",
-          date: "April 21, 2021",
-          category: "TECO",
-          content:
-            "vpn一般指虚拟专用网络。虚拟专用网络(VPN)的功能是：在公用网络上建立专用网络，进行加密通讯。在企业网络中有广泛应用。VPN网关通过对数据包的加密和数据包目标地址的转换实现远程访问。VPN可通过服务器、硬件、软件等多种方式实现。",
-        },
-        {
-          id: 3,
-          imgUrl: require("../assets/hfh.png"),
-          title: "科学上网",
-          date: "April 21, 2021",
-          category: "TECO",
-          content:
-            "vpn一般指虚拟专用网络。虚拟专用网络(VPN)的功能是：在公用网络上建立专用网络，进行加密通讯。在企业网络中有广泛应用。VPN网关通过对数据包的加密和数据包目标地址的转换实现远程访问。VPN可通过服务器、硬件、软件等多种方式实现。",
-        },
-      ],
+      skillList: [],
+      contentList: [],
     };
+  },
+  created: function () {
+    this.contentList = contentList;
+    this.skillList = skillList;
   },
 };
 </script>
@@ -165,7 +122,7 @@ export default {
   display: inline-block;
   margin-bottom: 10px;
 }
-.right-content p {
+.right-content span:last-child {
   color: #aaaaaa;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
@@ -182,7 +139,7 @@ export default {
 }
 
 .right-content .title,
-.right-content p:hover {
+.right-content span:last-child:hover {
   color: #333;
   cursor: pointer;
   transition: all 0.5s;
@@ -245,18 +202,14 @@ export default {
 /* 技能栏几种style */
 .style1 {
   background: linear-gradient(to right, #2196f3 0%, #0d2436 100%);
-  width: 85% !important;
 }
 .style2 {
   background: linear-gradient(to right, #1e8b2d 0%, #6d0f23 100%);
-  width: 80% !important;
 }
 .style3 {
   background: linear-gradient(to right, #295172 0%, #69580d 100%);
-  width: 45% !important;
 }
 .style4 {
   background: linear-gradient(to right, #090e11 0%, #fefeff 100%);
-  width: 65% !important;
 }
 </style>

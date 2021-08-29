@@ -3,16 +3,15 @@
     <div class="articleContainer">
       <div class="imgContainer">
         <img
-          :src="contentList[contentIndex].imgUrl"
+          :src="contentList[contentIndex].contentImgUrl"
           :alt="contentList[contentIndex].title"
         />
       </div>
       <div class="articleContext">
         <span class="title">{{ contentList[contentIndex].title }}</span>
-        <span class="date">{{ contentList[contentIndex].date }}</span
-        >|
+        <span class="date">{{ contentList[contentIndex].date }}</span> |
         <span class="category">{{ contentList[contentIndex].category }}</span>
-        <p>{{ contentList[contentIndex].content }}</p>
+        <p v-html="contentList[contentIndex].content"></p>
       </div>
       <div class="link-container">
         <router-link to="/home" class="back">返回</router-link>
@@ -21,52 +20,18 @@
   </div>
 </template>
 <script>
+import jsonData from "../../public/data.json";
+let contentList = jsonData.articles;
 export default {
   name: "rightside-bar",
   data() {
     return {
-      contentList: [
-        {
-          id: 1,
-          imgUrl: require("../assets/ezhomes.png"),
-          title: "科学上网",
-          date: "April 21, 2021",
-          category: "TECO",
-          content:
-            "vpn一般指虚拟专用网络。虚拟专用网络(VPN)的功能是：在公用网络上建立专用网络，进行加密通讯。在企业网络中有广泛应用。VPN网关通过对数据包的加密和数据包目标地址的转换实现远程访问。VPN可通过服务器、硬件、软件等多种方式实现。vpn一般指虚拟专用网络。虚拟专用网络(VPN)的功能是：在公用网络上建立专用网络，进行加密通讯。在企业网络中有广泛应用。VPN网关通过对数据包的加密和数据包目标地址的转换实现远程访问。VPN可通过服务器、硬件、软件等多种方式实现。vpn一般指虚拟专用网络。虚拟专用网络(VPN)的功能是：在公用网络上建立专用网络，进行加密通讯。在企业网络中有vpn一般指虚拟专用网络。虚拟专用网络(VPN)的功能是：在公用网络上建立专用网络，进行加密通讯。在企业网络中有广泛应用。VPN网关通过对数据包的加密和数据包目标地址的转换实现远程访问。VPN可通过服务器、硬件、软件等多种方式实现。vpn一般指虚拟专用网络。虚拟专用网络(VPN)的功能是：在公用网络上建立专用网络，进行加密通讯。在企业网络中有广泛应用。VPN网关通过对数据包的加密和数据包目标地址的转换实现远程访问。VPN可通过服务器、硬件、软件等多种方式实现。vpn一般指虚拟专用网络。虚拟专用网络(VPN)的功能是：在公用网络上建立专用网络，进行加密通讯。在企业网络中有广泛应用。VPN网关通过对数据包的加密和数据包目标地址的转换实现远程访问。VPN可通过服务器、硬件、软件等多种方式实现。vpn一般指虚拟专用网络。虚拟专用网络(VPN)的功能是：在公用网络上建立专用网络，进行加密通讯。在企业网络中有广泛应用。VPN网关通过对数据包的加密和数据包目标地址的转换实现远程访问。VPN可通过服务器、硬件、软件等多种方式实现。vpn一般指虚拟专用网络。虚拟专用网络(VPN)的功能是：在公用网络上建立专用网络，进行加密通讯。在企业网络中有广泛应用。VPN网关通过对数据包的加密和数据包目标地址的转换实现远程访问。VPN可通过服务器、硬件、软件等多种方式实现。vpn一般指虚拟专用网络。虚拟专用网络(VPN)的功能是：在公用网络上建立专用网络，进行加密通讯。在企业网络中有广泛应用。VPN网关通过对数据包的加密和数据包目标地址的转换实现远程访问。VPN可通过服务器、硬件、软件等多种方式实现。vpn一般指虚拟专用网络。虚拟专用网络(VPN)的功能是：在公用网络上建立专用网络，进行加密通讯。在企业网络中有广泛应用。VPN网关通过对数据包的加密和数据包目标地址的转换实现远程访问。VPN可通过服务器、硬件、软件等多种方式实现。vpn一般指虚拟专用网络。虚拟专用网络(VPN)的功能是：在公用网络上建立专用网络，进行加密通讯。在企业网络中有广泛应用。VPN网关通过对数据包的加密和数据包目标地址的转换实现远程访问。VPN可通过服务器、硬件、软件等多种方式实现。vpn一般指虚拟专用网络。虚拟专用网络(VPN)的功能是：在公用网络上建立专用网络，进行加密通讯。在企业网络中有广泛应用。VPN网关通过对数据包的加密和数据包目标地址的转换实现远程访问。VPN可通过服务器、硬件、软件等多种方式实现。vpn一般指虚拟专用网络。虚拟专用网络(VPN)的功能是：在公用网络上建立专用网络，进行加密通讯。在企业网络中有广泛应用。VPN网关通过对数据包的加密和数据包目标地址的转换实现远程访问。VPN可通过服务器、硬件、软件等多种方式实现。vpn一般指虚拟专用网络。虚拟专用网络(VPN)的功能是：在公用网络上建立专用网络，进行加密通讯。在企业网络中有广泛应用。VPN网关通过对数据包的加密和数据包目标地址的转换实现远程访问。VPN可通过服务器、硬件、软件等多种方式实现。vpn一般指虚拟专用网络。虚拟专用网络(VPN)的功能是：在公用网络上建立专用网络，进行加密通讯。在企业网络中有广泛应用。VPN网关通过对数据包的加密和数据包目标地址的转换实现远程访问。VPN可通过服务器、硬件、软件等多种方式实现。",
-        },
-        {
-          id: 1,
-          imgUrl: require("../assets/home-bg.jpg"),
-          title: "科学上网",
-          date: "April 21, 2021",
-          category: "TECO",
-          content:
-            "vpn一般指虚拟专用网络。虚拟专用网络(VPN)的功能是：在公用网络上建立专用网络，进行加密通讯。在企业网络中有广泛应用。VPN网关通过对数据包的加密和数据包目标地址的转换实现远程访问。VPN可通过服务器、硬件、软件等多种方式实现。",
-        },
-        {
-          id: 1,
-          imgUrl: require("../assets/home-bg.jpg"),
-          title: "科学上网",
-          date: "April 21, 2021",
-          category: "TECO",
-          content:
-            "vpn一般指虚拟专用网络。虚拟专用网络(VPN)的功能是：在公用网络上建立专用网络，进行加密通讯。在企业网络中有广泛应用。VPN网关通过对数据包的加密和数据包目标地址的转换实现远程访问。VPN可通过服务器、硬件、软件等多种方式实现。",
-        },
-        {
-          id: 1,
-          imgUrl: require("../assets/home-bg.jpg"),
-          title: "科学上网",
-          date: "April 21, 2021",
-          category: "TECO",
-          content:
-            "vpn一般指虚拟专用网络。虚拟专用网络(VPN)的功能是：在公用网络上建立专用网络，进行加密通讯。在企业网络中有广泛应用。VPN网关通过对数据包的加密和数据包目标地址的转换实现远程访问。VPN可通过服务器、硬件、软件等多种方式实现。",
-        },
-      ],
+      contentList: [],
       contentIndex: "",
     };
   },
   created() {
+    this.contentList = contentList;
     this.contentIndex = this.$route.query.id - 1;
   },
 };

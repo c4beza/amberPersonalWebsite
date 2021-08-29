@@ -8,8 +8,8 @@
         <li class="nav-home nav-btn active">
           <router-link to="/home">Home</router-link>
         </li>
-        <li class="nav-works nav-btn"><a href="#works">About</a></li>
-        <li class="fade nav-btn"><a href="#top">Contact</a></li>
+        <!-- <li class="nav-works nav-btn"><a href="#works">About</a></li> -->
+        <!-- <li class="fade nav-btn"><a href="#top">Contact</a></li> -->
       </ul>
     </nav>
   </header>
