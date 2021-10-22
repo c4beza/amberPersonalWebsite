@@ -1,5 +1,5 @@
 module.exports = {
-    "publicPath": "/vue/",
+    "publicPath": "/",
     "devServer": {
       "port": 5000
     },
